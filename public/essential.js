@@ -97,7 +97,7 @@
       axios.put(ESSENTIALS_API, {
         items: cart.map(item => ({ _id: item._id, quantityDonated: item.quantity })),
       });
-      const response = await axios.post("http://localhost:5000/api/orphan/checkout", {
+      const response = await axios.post("/api/orphan/checkout", {
         items: cart.map(item => ({ description: item.description, name: item.name, price: item.price, quantity: item.quantity })),
         email,
       });
