@@ -23,7 +23,7 @@
       <div class="essential">
         <h3>${essential.name}</h3>
         <p>${essential.description || "No description available."}</p>
-        <p>Price: $${essential.price}</p>
+        <p>Price: ₹${essential.price}</p>
         <p>quantity we need: ${essential.quantityAvailable}</p>
         <button data-essential='${encodeURIComponent(JSON.stringify(essential))}' class="add-to-cart">
           donate
@@ -58,7 +58,7 @@
   function updateCart() {
     cartItems.innerHTML = cart.map((item, index) => `
       <li>
-        ${item.name} - $${item.price} x ${item.quantity}
+        ${item.name} - ₹${item.price} x ${item.quantity}
         <button class="remove" onclick="removeFromCart(${index})">Remove</button>
       </li>
     `).join("");
