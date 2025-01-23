@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donation.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Free Donation</title>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <h1>Orphanage Donation</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="donationfree.html" class="active">Free Donation</a>
+            <a href="essential.html">Essential Donation</a>
+        </nav>
+    </div>
+</header>
+    
+    <div class="main">
+        <h1>Donate Generously</h1>
+        <p>Your contribution can make a big difference. Fill in the details below to donate.</p>
+        <form>
+            <input id="name" type="text" placeholder="Your Name" required>
+            <input id="email" type="email" placeholder="Your Email" required>
+            <input id="amount" type="number" placeholder="Donation Amount" required>
+            <button id="buttonn" type="button">Donate Now</button>
+        </form>
+    </div>
+
+    <script src="donation.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf0 ; /* White as the major color */
+    color: #333;
+  }
+  
+  /* Header Styling */
+  header {
+    
+    height: 50px;
+    background-color:#0078D7; /* Blue as secondary color */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav a:hover,
+  header nav a.active {
+    background-color: #0056b3; /* Slightly darker blue */
+  }
+  
+  /* Hero Section Styling */
+  .hero {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./12.webp");
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #f5faff; /* Light blue tint */
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0078D7;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+  }
+  
+  .hero .btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero .btn-blue {
+    background-color: #0078D7;
+    color: white;
+  }
+  
+  .hero .btn-blue:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  .hero .btn-green {
+    background-color: #00c853;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .hero .btn-green:hover {
+    background-color: #009624;
+    transform: translateY(-3px);
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #0078D7; /* Light gray */
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Quote Section Styling */
+.quotes {
+  background-color: #f5faff00; /* Light blue tint */
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 800px;}
+
+.quotes p {
+  font-size: 18px;
+  font-style: italic;
+  color: #0078D7; /* Blue text for the quote */
+  margin: 0;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.quotes .author {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00c853; /* Green color for the author */
+  margin-top: 10px;
+}
+
+.content{
+  background-color: #ffffff07;
+  backdrop-filter: blur(3px);
+  border-radius:30px;
+}
+
+.pp p{
+  color:#333;
+}
+
+/* General Mobile Styling */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Header Styling */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 5px 10px 0 10px;
+    padding: 8px 15px;
+  }
+
+  /* Hero Section Styling */
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    margin: 10px auto;
+    padding: 10px 15px;
+  }
+
+  /* Quote Section Styling */
+  .quotes {
+    width: auto;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 15px;
+  }
+
+  .quotes p {
+    font-size: 16px;
+  }
+
+  .quotes .author {
+    font-size: 16px;
+  }
+
+  /* Footer Styling */
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  /* Content Styling */
+  .content {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .pp p {
+    font-size: 14px;
+  }
+}

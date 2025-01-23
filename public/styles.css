@@ -1,0 +1,244 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    
+    height: 50px;
+    background-color: #0078D7; /* Blue as secondary color */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav a:hover,
+  header nav a.active {
+    background-color: #0056b3; /* Slightly darker blue */
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  #essential-list {
+    width: 60%;
+  }
+  
+  .essential {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .essential h3 {
+    margin-top: 0;
+  }
+  
+  .essential button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all;
+    transition-duration: .3s;
+  }
+
+  .essential button:hover{
+    background-color: #009624;
+    transform: translateY(-3px);
+  }
+  
+  #cart {
+    width: 35%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  #cart h2 {
+    margin-top: 0;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 10px;
+  }
+  
+  #donate-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    transition: all;
+    transition-duration: .3s;
+  }
+
+  #donate-btn:hover{
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  #donate-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .remove{
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all;
+    transition-duration: 0.3s;
+  }
+
+  .remove:hover{
+    background-color: #009624;
+    transform: translatey(-3px);
+  }
+
+  .sss{
+    color: #0078D7;
+    width: 50%;
+    font-size:larger;
+    margin: 20px 30px;
+    padding: 10px 43px;
+  }
+/* General Mobile Styling */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Header Styling */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 8px 12px;
+  }
+
+  /* Main Section */
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #essential-list, #cart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .essential {
+    padding: 10px;
+  }
+
+  .essential h3 {
+    font-size: 18px;
+  }
+
+  .essential button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  #cart h2 {
+    font-size: 18px;
+  }
+
+  #cart-items li {
+    font-size: 14px;
+  }
+
+  #donate-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Footer Styling */
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* Miscellaneous */
+  .remove {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .sss {
+    font-size: 14px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 8px 15px;
+  }
+}

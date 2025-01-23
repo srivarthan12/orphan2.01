@@ -1,0 +1,304 @@
+/* General Body Styling */
+body {
+    background-image: url("./DALL·E\ 2024-12-31\ 18.17.28\ -\ A\ heartwarming\ toon-style\ illustration\ of\ an\ orphanage\ with\ a\ large\ banner\ that\ says\ \'Thank\ You\'\ in\ bright\,\ cheerful\ letters.\ The\ scene\ includes\ happy.webp");
+    font-family: 'Poppins', Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #ecebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers vertically */
+    height: 100vh;
+    color: #333;
+  }
+  
+  /* Header Styling */
+  header {
+    position: fixed;
+    bottom: 86%;
+    z-index: 2;
+    width: 100vw;
+    height: 50px;
+    background-color: #0078D7; /* Blue as secondary color */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav a:hover,
+  header nav a.active {
+    background-color: #0056b3; /* Slightly darker blue */
+  }
+  
+  /* Centered Form Container */
+  .main {
+    position: fixed;
+    top: 38%;
+    left: 50%;
+    translate: -50% -50%;
+    max-width: 400px;
+    width: 90%; /* Ensure it fits on smaller screens */
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 120px; /* Ensures the form doesn't overlap with the header */
+  }
+  
+  /* Form Title */
+  .main h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input Fields */
+  input {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Input Focus Effects */
+  input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+  }
+  
+  /* Placeholder Styling for Inputs */
+  input::placeholder {
+    color: #918f8f;
+    font-style: italic;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: rgb(61, 153, 61);
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  /* Hover Effect for Button */
+  button:hover {
+    background-color:rgb(44, 114, 44) ;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+  }
+  
+  /* General Body Styling */
+  body {
+      background-image: url("./DALL·E\ 2024-12-31\ 18.17.28\ -\ A\ heartwarming\ toon-style\ illustration\ of\ an\ orphanage\ with\ a\ large\ banner\ that\ says\ \'Thank\ You\'\ in\ bright\,\ cheerful\ letters.\ The\ scene\ includes\ happy.webp");
+      font-family: 'Poppins', Arial, sans-serif;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      background-color: #ecebeb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Centers vertically */
+      height: 100vh;
+      color: #333;
+    }
+    
+    /* Header Styling */
+    header {
+      position: fixed;
+      bottom: 86%;
+      z-index: 2;
+      width: 100vw;
+      height: 50px;
+      background-color: #0078D7; /* Blue as secondary color */
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    header nav a:hover,
+    header nav a.active {
+      background-color: #0056b3; /* Slightly darker blue */
+    }
+    
+    /* Centered Form Container */
+    .main {
+      position: fixed;
+      top: 38%;
+      left: 50%;
+      translate: -50% -50%;
+      max-width: 400px;
+      width: 90%; /* Ensure it fits on smaller screens */
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin-top: 120px; /* Ensures the form doesn't overlap with the header */
+    }
+    
+    /* Form Title */
+    .main h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    /* Form Styling */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Input Fields */
+    input {
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      box-sizing: border-box;
+      outline: none;
+      transition: 0.3s ease-in-out;
+    }
+    
+    /* Input Focus Effects */
+    input:focus {
+      border-color: #6a11cb;
+      box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+    }
+    
+    /* Placeholder Styling for Inputs */
+    input::placeholder {
+      color: #918f8f;
+      font-style: italic;
+    }
+    
+    /* Button Styling */
+    button {
+      background-color: rgb(61, 153, 61);
+      color: white;
+      border: none;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+    
+    /* Hover Effect for Button */
+    button:hover {
+      background-color: rgb(44, 114, 44);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        height: auto;
+        padding: 10px 0;
+      }
+  
+      header h1 {
+        font-size: 20px;
+      }
+  
+      header nav a {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+  
+      .main {
+        max-width: 90%;
+        padding: 20px;
+      }
+  
+      .main h1 {
+        font-size: 20px;
+      }
+  
+      input, button {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+
+  
