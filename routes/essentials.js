@@ -33,7 +33,7 @@ router.post("/checkout", async (req, res) => {
   try {
     const lineItems = items.map((item) => ({
       price_data: {
-        currency: "usd",
+        currency: "inr",
         product_data: {
           name: item.name,
           description: item.description || "No description available",
