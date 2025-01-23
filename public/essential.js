@@ -1,5 +1,5 @@
-  const ESSENTIALS_API = "http://localhost:5000/api/orphan";
-  const DONATE_API = "http://localhost:5000/api/orphan/essential";
+  const ESSENTIALS_API = "/api/orphan";
+  const DONATE_API = "/api/orphan/essential";
 
   const essentialList = document.getElementById("essential-list");
   const cartItems = document.getElementById("cart-items");
