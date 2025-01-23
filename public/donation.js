@@ -1,4 +1,4 @@
-const DONATE_API = "http://localhost:5000/api/orphan/free";
+const DONATE_API = "/api/orphan/free";
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const amountInput = document.getElementById("amount");
