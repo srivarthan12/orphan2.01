@@ -3,6 +3,12 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const amountInput = document.getElementById("amount");
 const button = document.getElementById("buttonn");
+const toggleButton = document.querySelector('.nav-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
 
 async function handleDonation() {
   try {

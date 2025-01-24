@@ -5,6 +5,14 @@
   const cartItems = document.getElementById("cart-items");
   const totalAmountEl = document.getElementById("total-amount");
   const donateBtn = document.getElementById("donate-btn");
+  const button = document.getElementById("buttonn");
+const toggleButton = document.querySelector('.nav-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
 
   let cart = [];
 
@@ -41,19 +49,26 @@
   
 
   function addToCart(essential) {
-    const existingItem = cart.find(item => item._id === essential._id);
-    if (existingItem) {
-      if (existingItem.quantity < essential.quantityAvailable) {
-        existingItem.quantity++;
-        
-      } else {
-        alert("its enough thankyou!");
-      }
-    } else {
-      cart.push({ ...essential, quantity: 1});
+    if (essential.quantityAvailable === 0) {
+        alert("donate this item someother time!");
+        return; 
     }
+
+    const existingItem = cart.find(item => item._id === essential._id);
+
+    if (existingItem) {
+        if (existingItem.quantity < essential.quantityAvailable) {
+            existingItem.quantity++;
+        } else {
+            alert("That's enough, thank you!");
+        }
+    } else {
+        cart.push({ ...essential, quantity: 1 });
+    }
+
     updateCart();
-  }
+}
+
  
   function updateCart() {
     cartItems.innerHTML = cart.map((item, index) => `
