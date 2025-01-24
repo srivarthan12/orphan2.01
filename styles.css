@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+.nav-toggle{
+  display: none;
+}
+
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(46, 139, 86); /* Semi-transparent green */
+  color: #fff;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header a:hover,
+header a.active {
+  color: #1e90ff; /* Blue highlight */
+}
+
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 5rem auto 2rem;
+  padding: 0 15px;
+}
+
+#essential-list {
+  margin: 5px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+
+.essential{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffffffb9;
+}
+#cart {
+  width: 400px;
+  margin-top: 10px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+button {
+  background-color: #2e8b57;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e6845;
+}
+#cart-items li{
+  margin: 5px;
+  list-style-type: none;
+  
+}
+
+#donate-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+/* Responsive Design for Screens 768px or Less */
+@media (max-width: 768px) {
+  /* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #2e8b57; /* Green */
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #1e90ff; /* Blue highlight */
+}
+
+/* Toggle Button */
+.nav-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Show Sidebar when active */
+.sidebar.active {
+  left: 0;
+}
+
+  .nav-toggle {
+    display: block; /* Show button for small screens */
+  }
+
+  header nav {
+    display: none; /* Hide default navigation */
+  }
+
+  #essential-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
