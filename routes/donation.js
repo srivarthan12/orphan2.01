@@ -5,6 +5,16 @@ const Donation = require("../models/donation");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
+
+router.get("/get", async (req, res) => {
+  try {
+    const Donations = await Donation.find();
+    res.json(Donations);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 // Free donation (direct save)
 router.post("/free", async (req, res) => {
   const donation = new Donation(req.body);
@@ -62,5 +72,8 @@ router.post("/free/checkout", async (req, res) => {
     res.status(500).json({ error: "Failed to create Stripe session" });
   }
 });
+
+
+
 
 module.exports = router;
