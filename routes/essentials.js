@@ -26,6 +26,27 @@ router.post('/createe', async (req, res) => {
   }
 });
 
+//delete
+router.delete("/delete/:id", async (req, res) => {
+  try {
+      const { id } = req.params;
+      console.log("Received DELETE request for ID:", id);
+
+      // Find the essential by ID and delete it
+      const essential = await Essential.findByIdAndDelete(id);
+
+      if (!essential) {
+          return res.status(404).json({ message: "Essential not found" });
+      }
+
+      res.json({ message: "Essential deleted successfully" });
+  } catch (error) {
+      console.error("Error deleting essential:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+
+
 // Add new essential
 router.post("/checkout", async (req, res) => {
   const { items, email } = req.body;
