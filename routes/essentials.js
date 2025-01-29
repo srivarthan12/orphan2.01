@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 });
 
 
-router.post('/', async (req, res) => {
+router.post('/createe', async (req, res) => {
   const essential = new Essential(req.body);
   try {
     const newEssential = await essential.save();
