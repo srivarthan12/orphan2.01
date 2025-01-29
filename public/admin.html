@@ -6,102 +6,182 @@
     <title>Donations</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color:lavender;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: lavender;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            width: 100%;
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav ul li {
+            display: inline;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Page Title */
+        h1 {
+            color: #007BFF;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         #essential-list {
-            display: flex;
-            flex-direction: column-reverse;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: space-evenly;
-            align-items:start;
-            background-color: #ddd;
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
         .essential {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
         }
 
-        .essential:last-child {
-            border-bottom: none;
+        .essential:hover {
+            transform: translateY(-3px);
         }
 
         .essential h3 {
-            margin: 0;
             font-size: 20px;
             color: #007BFF;
+            margin-bottom: 5px;
         }
 
         .essential h4 {
-            margin: 5px 0;
             font-size: 16px;
             color: #555;
+            margin-bottom: 5px;
         }
 
         .essential p {
-            margin: 5px 0;
             font-size: 14px;
             color: #666;
+            margin-bottom: 5px;
         }
-        h1{
-            position: fixed;
-            left: 50%;
-            top: 0%;
-            translate: -50% -50%;
-            color: #007BFF;
+
+        .essential ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .essential ul li {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #essential-list {
+                grid-template-columns: 1fr;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>all donations</h1>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="admin.html">All Donations</a></li>
+            <li><a href="createessentials.html">Create Essentials</a></li>
+        </ul>
+    </nav>
+
+    <h1>All Donations</h1>
+
     <div id="essential-list">
+        <!-- Donations will be loaded here -->
     </div>
-    
-</body>
-<script>
-    const ESSENTIALS_API = "/api/orphan/get";
-    const essentialList = document.getElementById("essential-list");
 
-    async function fetchEssentials() {
-        try {
-            const response = await axios.get(ESSENTIALS_API);
-            const essentials = response.data;
-            renderEssentials(essentials);
-        } catch (error) {
-            console.error("Error fetching essentials:", error);
+    <script>
+        const ESSENTIALS_API = "/api/orphan/get";
+        const essentialList = document.getElementById("essential-list");
+
+        async function fetchEssentials() {
+            try {
+                const response = await axios.get(ESSENTIALS_API);
+                const essentials = response.data;
+                renderEssentials(essentials);
+            } catch (error) {
+                console.error("Error fetching essentials:", error);
+            }
         }
-    }
 
-    function renderEssentials(essentials) {
-        essentialList.innerHTML = essentials.map((essential, index) => `
-            <div class="essential">
-                <h3>${essential.donorName}</h3>
-                <h4>${essential.email}</h4>
-                <p>Donated: ₹${essential.amount}</p>
-                <p>Date: ${essential.date}</p>
-                 <p>Items:</p>
-            <ul>
-                ${essential.items.map(item => `
-                    <li>${item.name} - Quantity: ${item.quantity}</li>
-                `).join("")}
-            </ul>
-            </div>
-        `).join("");
-    }
+        function renderEssentials(essentials) {
+            essentialList.innerHTML = essentials.map(essential => `
+                <div class="essential">
+                    <h3>${essential.donorName}</h3>
+                    <h4>${essential.email}</h4>
+                    <p>Donated: ₹${essential.amount}</p>
+                    <p>Date: ${essential.date}</p>
+                    <p><strong>Items:</strong></p>
+                    <ul>
+                        ${essential.items.map(item => `
+                            <li>${item.name} - Quantity: ${item.quantity}</li>
+                        `).join("")}
+                    </ul>
+                </div>
+            `).join("");
+        }
 
-    fetchEssentials();
-</script>
+        fetchEssentials();
+    </script>
+
+</body>
 </html>
